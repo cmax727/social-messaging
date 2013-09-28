@@ -1,0 +1,9 @@
+{
+    "GetAccountByUrlResult": {
+        "Id": 1,
+        "Name": "Comcast",
+        "OffersFederatedLogin": false,
+        "PhoneNumber": "888-560-0902",
+        "WebURL": "comcast.myaccolade.com"
+    }
+}

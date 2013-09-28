@@ -1,0 +1,12 @@
+{
+    "GetHealthAssistantProfileResult": {
+        "FirstName": "Kristin",
+        "Id": 670,
+        "IsFederated": false,
+        "LastName": "Lacher",
+        "MrmId": "f6d5dbd2-e93c-df11-b0ce-00237def8bc6",
+        "NickName": "Kristin",
+        "PhoneNumber": "0625",
+        "SubId": 0
+    }
+}

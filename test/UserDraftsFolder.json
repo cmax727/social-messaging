@@ -1,0 +1,8 @@
+{"GetUserDraftsFolderResult":{
+"Items":[
+{"ContentPreview":"this is a message","Date":"\/Date(1361316406237-0500)\/","HasRead":true,"Id":"812","Title":"draft"},
+{"ContentPreview":"test","Date":"\/Date(1361288757847-0500)\/","HasRead":true,"Id":"811","Title":"test"},
+{"ContentPreview":"asdffffffffffffffffffffff","Date":"\/Date(1361181625973-0500)\/","HasRead":true,"Id":"809","Title":"dsfa"}
+,{"ContentPreview":"test test",
+
+"Date":"\/Date(1360312980823-0500)\/","HasRead":true,"Id":"803","Title":"Test"}],"Total":0}}

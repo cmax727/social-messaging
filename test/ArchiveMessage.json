@@ -1,0 +1,39 @@
+{
+    "GetUserArchiveFolderResult": {
+        "Items": [
+            {
+                "ContentPreview": "this is a message to an u",
+                "Date": "/Date(1355206510117-0500)/",
+                "HasRead": false,
+                "Id": "737",
+				 "Toid": "568",
+                "Title": "TEST Local unregistered c"
+            },
+            {
+                "ContentPreview": "MAR-ZA-PAN",
+                "Date": "/Date(1355204145730-0500)/",
+                "HasRead": true,
+                "Id": "736",
+					 "Toid": "568",
+                "Title": "TEST Local MAR-ZA-PAN"
+            },
+            {
+                "ContentPreview": "test alt",
+                "Date": "/Date(1355192723487-0500)/",
+                "HasRead": true,
+                "Id": "733",
+					 "Toid": "568",
+                "Title": "TEST Local Test alt"
+            },
+            {
+                "ContentPreview": "alternate email 4",
+                "Date": "/Date(1354018404300-0500)/",
+                "HasRead": true,
+                "Id": "674",
+					 "Toid": "568",
+                "Title": "To jgray at gmail"
+            }
+        ],
+        "Total": 8
+    }
+}

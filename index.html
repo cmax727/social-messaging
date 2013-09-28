@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Accolade</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/splash.css">
+
+	<script src="./js/lib/cordova-2.3.0.js"></script>
+</head>
+<body onload="init();">
+	<script type="text/javascript">
+       
+		function init() {
+			document.addEventListener("deviceready", onDeviceReady, false);
+           
+		}
+		
+		function onDeviceReady(){
+            
+			var deviceId = device.uuid;
+            document.location.href = "http://comcast-dev.myaccolade.com/?isNativeMobileApp=1&deviceId=" + deviceId;
+            
+		}
+        
+	</script>
+    <header class="splash-header">
+        <h1 class="splash-logo">TESTING Accolade</h1>
+    </header>
+    
+    <section class="splash-intro">
+    </section>
+    
+    <footer class="splash-footer">
+        
+    </footer>
+    
+
+</body>
+</html>

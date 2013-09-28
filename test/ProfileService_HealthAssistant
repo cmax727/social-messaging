@@ -1,0 +1,7 @@
+//Get Health Assistant, shown at top of home screen (image and phonenumber is click)
+//http://comcast-dev.myaccolade.com/_vti_bin/Accolade.Enterprise.SharePoint/ProfileService.svc/HealthAssistant
+//
+//2.	After retrieving the health assistant’s profile object, the MRM id can be used to generate a url for the health assistant’s photo.
+//a.	Photo Url format:  http://comcast-dev.myaccolade.com/haimages/[MRM_id].png
+
+{"GetHealthAssistantProfileResult":{"FirstName":"Kristin","Id":670,"IsFederated":false,"LastName":"Lacher","MrmId":"f6d5dbd2-e93c-df11-b0ce-00237def8bc6","NickName":"Kristin","PhoneNumber":"0625","SubId":0}}

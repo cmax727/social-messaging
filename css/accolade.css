@@ -1,0 +1,618 @@
+/* ==============================
+ * Message Container
+ * ============================== */
+#forgotUserDialog {
+position: absolute;
+top: 10px;
+width: 90%;
+padding: 8px 10px 0px 6px;
+margin-left: 4%;
+}
+#btnAttachFile {
+	display: none;
+}
+#showdisclaimer {
+display: block;
+position: relative;
+margin-top: -22px;
+margin-right: 2px;
+margin-bottom: 0px;
+margin-left: auto;
+}
+.disclaimerText {
+	background: white;
+	margin: 8px 0 0 0;
+	padding: 5px 2px 5px 2px;
+	font-family: calibri,arial;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+
+	        border-top: 6px solid #B2C994;
+	-webkit-box-shadow: 0 1px 6px 0 #777;
+	   -moz-box-shadow: 0 1px 6px 0 #777;
+	        box-shadow: 0 1px 6px 0 #777;
+	display: none;
+	-webkit-transition: top 0.5s ease;
+}
+.disclaimerText.is-visible {
+	display: block;
+}
+
+#message-to {
+	background: none;
+	background-image: none;
+	color: black;
+	padding-left: 0;
+	text-transform: none;
+}
+#message-re {
+	background: none;
+	background-image: none;
+	color: black;
+	padding-left: 0;
+	text-transform: none;
+}
+#NoticeDetail {
+	height: 120px;
+}
+.message-container {
+	background: #FFF;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	border-top: 6px solid #B2C994;
+	-webkit-box-shadow: 0 1px 6px 0 #777;
+	   -moz-box-shadow: 0 1px 6px 0 #777;
+	        box-shadow: 0 1px 6px 0 #777;
+	margin: 15px 0;
+	padding: 10px;
+	
+}
+
+	.message-container h2 {
+		background: transparent url(../img/icon_rss.png) no-repeat 0 2px;
+		background-size: 15px 15px;
+		color: #777E95;
+		font-family: calibri,arial,verdana,sans-serif;
+		font-size: 1em;
+		line-height: 20px;
+		margin: 0 0 10px;
+		padding-left: 22px;
+		text-transform: uppercase;
+	}
+
+	.recent-messages h2 {background-image: url(../img/icon_message.png);}
+
+	.message-container h3 {
+		color: #333;
+		font-size: 0.88em;
+		margin-top: 0;
+	}
+
+		.message-container h3 small {
+			font-size: 0.93em;
+			font-weight: normal;
+		}
+	
+	.message-container p {
+		margin-bottom: 0;
+	}
+
+	.message-container dl,
+	.message-container ul {
+		margin: 0;
+		padding: 0;
+	}
+
+		.message-container dd,
+		.message-container dt,
+		.message-container li {
+			list-style: none;
+			margin: 10px 0 0;
+			padding-left: 20px;
+			padding-right: 2px;
+		}
+		.message-container dd {
+			border-bottom: 1px solid #B2CA92;
+			padding-bottom: 10px;
+		}
+		.message-container li {
+			border-top: 1px solid #B2CA92;
+			padding-top: 10px;
+		}
+		
+		.message-container dt {margin-bottom: -7px;}
+
+		.message-container dt:first-child,
+		.message-container li:first-child {margin-top: 0;}
+
+			.message-container dd a,
+			.message-container li a {
+				background: transparent url(../img/icon_arrow.png) no-repeat right center;
+				background-size: 7px 10px;
+				color: #717172;
+				display: block;
+				line-height: 18px;
+				max-height: 36px;
+				overflow: hidden;
+				padding-right: 12px;
+				text-decoration: none;
+				text-overflow: ellipsis;
+			}
+
+		.message-container dd.new,
+		.message-container li.new {
+			background: transparent url(../img/icon_bullet.png) no-repeat 2px 14px;
+			background-size: 8px 8px;
+		}
+
+		.message-container dd.new {
+			background-position: 2px 4px;
+		}
+
+		.message-header-date {
+		    color: #CCCCCC;
+		    display: inline;
+		    float: right;
+		    font-weight: 500;
+		    padding: 0 0 0 10px;
+		    position: relative;
+		}
+
+		.whats-new li {padding-left: 0;}
+#benefit_container {
+    height: 70%;
+	margin: 0 auto 20px;
+	padding: 6px 3px 0 8px;
+}
+/* ==============================
+ * Support Center Callout
+ * ============================== */
+
+.support-callout {
+	
+	background-position: left top, right top;
+	background-size: 50px 50px, 54px 54px;
+	margin: 5px 0 15px;
+	text-align: center;
+}
+
+	.support-callout img {
+		float: right;
+		height: 54px;
+		width: 54px;
+	}
+
+	.support-callout p {
+		color: #717172;
+		font-size: 0.88em;
+		font-weight: bold;
+		margin: 8px 0 0;
+	}
+
+		.support-callout a {
+			color: #717172;
+			text-decoration: none;
+		}
+
+/* ==============================
+ * Sidebar Menu
+ * ============================== */
+
+aside {
+	background: #717174;
+	left: -100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	-webkit-transition: left 0.3s ease;
+}
+
+	nav {
+		margin-top: 55px;
+	}
+
+		nav ul {
+			margin: 0;
+			padding: 0;
+		}
+
+			nav li {
+				background: transparent  no-repeat 7px 13px;
+				background-size: 20px 20px;
+				display: block;
+				list-style: none;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			.menu-compose {
+    			padding: 10px 0 0;
+    			position: relative;
+			}
+			.compose-button { margin: 0 auto; display: block}	
+			.menu-inbox { background-image: url(../img/icon_menu-inbox.png);}
+			.menu-tools    {background-image: url(../img/icon_menu-tools.png);}
+			.menu-records  {background-image: url(../img/icon_menu-records.png);}
+			.menu-benefits {background-image: url(../img/icon_menu-benefits.png);}
+			.menu-account  {background-image: url(../img/icon_menu-account.png);}
+			.menu-home     {background-image: url(../img/icon_menu-home.png);}
+
+				nav a {
+					background: transparent url(../img/icon_arrow.png) no-repeat right 18px;
+					background-size: 7px 10px;
+					
+					color: #DFD89F;
+					display: block;
+					font-family: calibri,arial,verdana,sans-serif;
+					font-size: 1.23em;
+					font-weight: bold;
+					padding: 10px 21px 10px 25px;
+					text-decoration: none;
+					text-shadow: 1px 1px 1px #525255;
+					white-space: nowrap;
+				}
+				nav ul li.menu-account a {
+ 				   border-top: 1px solid #B2CA92;
+ 				   border-bottom: 1px solid #B2CA92;
+				}
+
+/* Opening the sidebar navigation menu */
+
+.menu-active aside {
+	left: 0;
+	-webkit-transition: left 0.3s ease;
+}
+
+/** ====================
+ * Login Form
+ ======================= */
+
+.login-container {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+	.logo-small {
+		background: transparent url(../img/logo_small.png) no-repeat right top;
+		background-size: 90px 37px;
+		height: 37px;
+		margin: 0 0 6px;
+		overflow: hidden;
+		text-indent: 100%;
+		white-space: nowrap;
+	}
+
+	.login-form p {
+		margin: 1.5em 0;
+	}
+
+		.login-form a, .account-form a {
+			color: #399ACA;
+			float: right;
+			font-size: 0.85em;
+			font-weight: bold;
+			margin-top: 6px;
+			text-decoration: none;
+		}
+
+.error-message {
+    display: none;
+    left: 0;
+    margin-top: 2px;
+    !position: absolute;
+    width: 100%;
+}
+
+.error-message.is-visible {
+	display: block;
+}
+
+	.error-message p {
+		background: #FFF;
+		border: 3px solid #FBA038;
+		-webkit-border-radius: 2px;
+		   -moz-border-radius: 2px;
+				border-radius: 2px;
+		font-size: 0.75em;
+		margin: 0 25px;
+		padding: 10px;
+		position: relative;
+	}
+
+		.error-message strong {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.error-message p:after {
+			content: "";
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 10px solid #FFF;
+			height: 0; 
+			left: 22px;
+			position: absolute;
+			top: -9px;
+			width: 0; 
+		}
+
+		.error-message p:before {
+			content: "";
+			border-left: 14px solid transparent;
+			border-right: 14px solid transparent;
+			border-bottom: 14px solid #FBA038;
+			height: 0; 
+			left: 18px;
+			position: absolute;
+			top: -14px;
+			width: 0; 
+		}
+
+/* ==============================
+ * Inbox
+ * ============================== */
+
+.mail-heading {
+	color: #DFD8A0;
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: -5px;
+	margin-top: 15px;
+}
+
+	.mail-heading strong {
+		color: #FFF;
+		font-size: 1em;
+	}
+
+.button-container {
+	float: right;
+	margin-bottom: -5px;
+	!margin-top: 15px;
+}
+
+	.next-message-btn,
+	.prev-message-btn {
+		margin-left: 4px;
+		overflow: hidden;
+		position: relative;
+		text-indent: 100%;
+		white-space: nowrap;
+		width: 10px;
+	}
+
+		.next-message-btn:before,
+		.prev-message-btn:before {
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			content: "";
+			display: block;
+			height: 0;
+			left: 5px;
+			position: absolute;
+			top: 7px;
+			width: 0;
+		}
+
+		.prev-message-btn:before {
+			border-top: 14px solid #777E96;
+		}
+
+		.next-message-btn:before {
+			border-bottom: 14px solid #777E96;
+			top: 6px;
+		}
+
+/* Compose Message Form */
+
+.compose-message-form p {
+	line-height: 34px;
+	margin: 0;
+	text-align: right;
+}
+
+	.compose-message-form label {
+		float: left;
+		text-align: left;
+		width: 68px;
+	}
+
+	.compose-message-form input {
+		width: 65%;
+	}
+
+	.compose-message-form select {
+		width: 74%;
+	}
+
+.compose-message-form textarea {
+	font-size: 0.81em;
+	height: 200px;
+	margin-top: 10px;
+	width: 100%;
+}
+
+/* Inbox Controls */
+
+.inbox-controls-container {
+    bottom: 28px;
+    display: block;
+    left: 3px;
+    margin: 0 5px;
+  /*  min-width: 320px; */
+  /*  padding: 0; */
+    position: fixed;
+    width: 98%;
+}
+.inbox-controls a{
+	margin: 0 5px;
+}
+.inbox-controls {
+	background: #DFD7A4;
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+	margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.inbox-controls a:first-child {
+	!float: left;
+}
+
+/* ==============================
+ * Modal Dialogs
+ * ============================== */
+
+.modal-overlay {
+	background: #000;
+	display: none; /* hidden by default */
+	height: 100%;
+	left: 0;
+	opacity: 0.75;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+.modal-dialog {
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(228, 227, 227)));
+	background-image: -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(228, 227, 227));
+	background-image: -moz-linear-gradient(top, rgb(255, 255, 255), rgb(228, 227, 227));
+	background-image: -o-linear-gradient(top, rgb(255, 255, 255), rgb(228, 227, 227));
+	background-image: -ms-linear-gradient(top, rgb(255, 255, 255), rgb(228, 227, 227));
+	background-image: linear-gradient(top, rgb(255, 255, 255), rgb(228, 227, 227));
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+	display: none; /* hidden by default */
+	left: 0;
+	margin: 0 5%;
+	position: fixed;
+	top: 100px;
+	width: 90%;
+	z-index: 10;
+}
+
+	.modal-dialog h3 {
+		background: #B2C994;
+		-webkit-border-top-left-radius: 4px;
+			-moz-border-radius-topleft: 4px;
+				border-top-left-radius: 4px;
+		-webkit-border-top-right-radius: 4px;
+			-moz-border-radius-topright: 4px;
+				border-top-right-radius: 4px;
+		color: #FFF;
+		font-family: calibri,arial,verdana,sans-serif;
+		font-size: 1em;
+		font-weight: bold;
+		line-height: 26px;
+		margin: 0;
+		text-align: center;
+		text-shadow: 1px 1px 1px #798A65;
+	}
+
+	.modal-dialog div.content {
+		padding: 0 10px;
+	}
+
+		.modal-dialog p {
+			margin: 20px 0;
+		}
+
+		.modal-button-container {
+			text-align: center;
+		}
+
+.forgot-user-pass-success {
+	display: none; /* hidden by default */
+}
+
+	.forgot-user-pass-success-message {
+		color: #777E96;
+		font-size: 1em;
+		font-weight: bold;
+		text-align: center;
+	}
+
+/* When the form is submitted, need to show success message and hide form */
+.form-submitted .forgot-user-pass-success {display: block;}
+.form-submitted .forgot-user-pass-form    {display: none;}
+
+
+
+#logout-button {
+    border-radius: 5px 5px 5px 5px;
+    font-family: calibri,arial,verdana,sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    height: 25px;
+    line-height: 25px;
+    right: 9px;
+    top: 10px;
+    width: 56px;
+}
+/* When the 'forgot username/pass' links are clicked, show the modal */
+.modal-overlay.is-visible,
+.modal-dialog.is-visible {display: block;}
+
+	.right-btn{
+		background-color: #FFFFFF;
+		border-radius: 7px 7px 7px 7px;
+		color: #777E96;
+		font-weight: bolder;
+		height: 34px;
+		line-height: 34px;
+		position: absolute;
+		right: 17px;
+		text-decoration: none;
+		top: 6px;
+		width: 87px;
+	}
+    
+  a.btn{
+      cursor: pointer;
+  }
+
+  .message-error{
+      background-color:#ffff00;
+      color:RED;
+  }
+
+  #main-page{
+      margin: 0 10px;
+
+	height:80%; padding:0px; margin:0px;
+  }
+
+.account-form button{
+    margin: 3px 3px;
+    display:none;
+}
+.account-form .notice-msg{
+    display:none;
+}
+
+.text-disabled {
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    border: 2px inset;
+    background-color: #EBEBE4 !important;
+    color: #545454;
+}
+
+.usec.focused {
+    border: dotted 2px #f00;
+    padding: 5px 9px;
+    background: #fff;
+}
+.usec.focused button{
+    display:inline-block;
+}
+.usec.focused .notice-msg{
+    display:block
+}

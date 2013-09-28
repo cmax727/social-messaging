@@ -1,0 +1,113 @@
+body {
+	background: #D1CEBB url(../img/bg_splash.jpg) no-repeat 0 0;
+	background-size: cover;
+	color: #615a53;
+}
+
+		
+
+/** ====================
+ * Body
+ ======================= */
+
+
+
+
+/* News section */
+
+.recent-messages {
+	background: #FFF;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	border-top: 6px solid #B2C994;
+	-webkit-box-shadow: 0 1px 8px 1px #777;
+	   -moz-box-shadow: 0 1px 8px 1px #777;
+	        box-shadow: 0 1px 8px 1px #777;
+	margin-top: 10px;
+	padding: 6px;
+}
+
+	.recent-messages h2 {
+		background: transparent url(../img/email-icon.png) no-repeat 0 2px;
+		background-size: 15px 15px;
+		color: #777E95;
+		font-size: 1em;
+		line-height: 20px;
+		margin-bottom: 10px;
+		margin-top: 0;
+		padding-left: 22px;
+	}
+
+	.recent-messages ul {
+		margin: 0;
+		padding-left: 17px;
+	}
+
+		.recent-messages li {
+			color: #b2ca92;
+			margin: 10px 11px 10px 0;
+		}
+
+			.recent-messages a {
+				background: transparent url(../img/icon_arrow.png) no-repeat right center;
+				background-size: 7px 10px;
+				color: #717172;
+				display: block;
+				padding: 0 19px 0 0;
+				text-decoration: none;
+			}
+
+.whats-new {
+	background: #FFF;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	border-top: 6px solid #B2C994;
+	-webkit-box-shadow: 0 1px 8px 1px #777;
+	   -moz-box-shadow: 0 1px 8px 1px #777;
+	        box-shadow: 0 1px 8px 1px #777;
+	margin-top: 10px;
+	padding: 6px;
+}
+
+	.whats-new h2 {
+		background: transparent url(../img/icon_rss.png) no-repeat 0 2px;
+		background-size: 15px 15px;
+		color: #777E95;
+		font-size: 1em;
+		line-height: 20px;
+		margin-bottom: 10px;
+		margin-top: 0;
+		padding-left: 22px;
+	}
+
+	.whats-new ul {
+		margin: 0;
+		padding: 0;
+	}
+
+		.whats-new li {
+			list-style: none;
+			margin: 10px 11px 10px 0;
+		}
+
+			.whats-new a {
+				background: transparent url(../img/icon_arrow.png) no-repeat right center;
+				background-size: 7px 10px;
+				color: #717172;
+				display: block;
+				padding: 0 19px 0 0;
+				text-decoration: none;
+			}
+
+
+/**  **/
+
+.content-wrapper{
+margin:0 10px;
+}
+
+
+
+

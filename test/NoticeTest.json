@@ -1,0 +1,19 @@
+{
+    "GetNoticeHeadersResult": {
+        "Items": [
+            {
+                "Date": "/Date(1362114000000-0500)/",
+                "HasRead": "false",
+                "Id": "1",
+                "Title": "Notice Item 1 for logged in."
+            },
+            {
+                "Date": "/Date(1362114000000-0500)/",
+                "HasRead": "false",
+                "Id": "2",
+                "Title": "Notice Item 2"
+            }
+        ],
+        "Total": "2"
+    }
+}

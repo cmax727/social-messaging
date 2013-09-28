@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html class="no-js" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>My Accolade</title>
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" />
+    <link rel="stylesheet" href="/_layouts/mobileclientportal/css/normalize.css" >
+    <link rel="stylesheet" href="/_layouts/mobileclientportal/css/main.css">
+    <link rel="stylesheet" href="/_layouts/mobileclientportal/css/accolade.css">
+    <script src="/_layouts/mobileclientportal/js/lib/jquery-1.9.0.min.js"></script>
+    <script src="/_layouts/mobileclientportal/js/lib/jquery.tmple.min.js"></script>
+    <script src="/_layouts/mobileclientportal/js/lib/underscore-min.js"></script>
+    <script src="/_layouts/mobileclientportal/js/lib/backbone-0.9.js"></script>
+    <script src="/_layouts/mobileclientportal/js/lib/backbone.routefilter.js"></script>
+    <script src="/_layouts/mobileclientportal/js/lib/date.js"></script>
+	<script src="/_layouts/mobileclientportal/js/lib/cordova-2.3.0.js"></script>
+</head>
+<body class="page-home">
+<div>
+    <div class="modal-overlay">
+    </div>
+    <header>
+        <h1 class="home-title">My Accolade</h1>
+        <a href="#" class="menu-link">Menu</a>
+        <a href="/_layouts/Accolade.SharePoint.Login/Logout.aspx?sr=1" class="right-btn btnLogout" id="logout-button">Log Out</a>
+    </header>
+    <script type="text/template" id="page-template-home">
+		<section id="health-assistantcall" class="support-callout clearfix">
+
+		</section>
+
+        <section class="message-container recent-messages" id="topMessages">
+            <h2>RECENT MESSAGES</h2>
+			<!-- backbone recent fill here-->
+        </section> <!-- .recent-messages -->
+
+        <section class="message-container whats-new" id="noticeList">
+            <h2>Notices</h2>
+           <!-- backbone notice will fill in here -->
+        </section> <!-- .whats-new -->
+
+    </script>
+    <script type="text/template" id="health-ass-template">
+        <div>
+
+		<a href="tel:<%= GetAccountByUrlResult.PhoneNumber %>" style="width:100%; display:block">
+        <img style="float:left;" src="/_layouts/mobileclientportal/img/health-assistant-default.jpg" onError="this.onerror=null;this.src='/_layouts/mobileclientportal/img/health-assistant-default.jpg'" alt="health assistant" />
+		<img id="ha-profilepic" src="/haimages/<%= GetAccountByUrlResult.MrmId %>.png" onError="this.onerror=null;this.src='/_layouts/mobileclientportal/img/earphone.png'" alt="<%= GetAccountByUrlResult.FirstName %> - health assistant" />
+		<span id="ha-prompt">Tap to call your health assistant</span> <br />
+		<span id="ha-phone"><%= GetAccountByUrlResult.PhoneNumber %></span> x<span id="ha-extension"></span></a></div>
+    </script>
+    <script type="text/template" id="page-template-inbox">
+		<div class="button-container"><a href="#compose" id="btncompose" class="btn">Compose Message</a></div>
+		<div style="clear:both"/>
+		<section class="message-container" id="message-container">
+		</section> <!-- .whats-new -->
+    </script>
+    <script type="text/template" id="page-template-draft-Message">
+		<div class="button-container"><a href="#compose" id="btncompose" class="btn">Compose Message</a></div>
+		<div style="clear:both"/>
+
+        <section class="message-container" id="draft-message-container">
+        </section> <!-- .whats-new -->
+    </script>
+    <script type="text/template" id="page-template-archive-Message">
+		<section class="message-container" id="archive-message-container">
+		</section> <!-- .whats-new -->
+    </script>
+  
+    <script type="text/template" id="page-template-sent-Message">
+		<section class="message-container" id="sent-message-container">
+        
+		</section> 
+    </script>
+    <script type="text/template" id="page-template-benifits">
+		<section class="message-container" id="benefit_container">
+			<iframe id="iframe-benifit" scrolling="yes" frameBorder="0" style="overflow-y: scroll; width: 100%;height: 100%" src=""></iframe>
+		</section>
+	</script
+            >
+    <script	type="text/template" id="page-template-tos">
+        <section class="message-container tos" id="termsOfService">
+            <h2>TERMS OF SERVICE</h2>
+            <p>Last revised January 2013</p>
+
+            <p>Accolade, Inc., as well as its agents, contractors, and authorized service providers ("Accolade," "we" or "our") is pleased to offer to you access to our websites and online services via websites controlled or operated by Accolade such as MyAccolade.com and others which may be accessed by you now or in the future ("Accolade Internet Services"). Accolade provides various wellness programs for your personal use.</p>
+
+            <p>The Terms of Use provide terms and conditions under which you may use Accolade Internet Services.</p>
+
+            <p>PLEASE READ THESE TERMS OF USE BEFORE USING ACCOLADE INTERNET SERVICES. YOU AGREE TO BE BOUND BY ALL TERMS AND CONDITIONS IN THESE TERMS OF USE EVERY TIME YOU ACCESS ACCOLADE INTERNET SERVICES ONLINE OR OFFLINE.</p>
+
+            <p>ACCOLADE INTERNET SERVICES ARE IN NO WAY A REPLACEMENT TO MEDICAL CARE AND SHOULD NOT BE USED AS SUCH. ANY INFORMATION PROVIDED BY ACCOLADE IS FOR INFORMATIONAL PURPOSES ONLY. USE OF THE ACCOLADE INTERNET SERVICES DOES NOT CREATE A DOCTOR-PATIENT RELATIONSHIP BETWEEN YOU AND ACCOLADE.</p>
+
+            <p>In connection with providing Accolade Internet Services to you, we may collect certain information about you. Any such information is subject to our Privacy Policy which can be found here:
+                <a href="https://www.myaccolade.com/_Layouts/AccoladeUserRegistration/PrivacyPolicy.aspx">https://www.myaccolade.com/_Layouts/AccoladeUserRegistration/PrivacyPolicy.aspx</a><p>
+
+            <h2>1. Nature of services</h2>
+
+            <p>The Accolade Internet Services are comprised of various web pages and information and communication services.
+                The Accolade Internet Services offered to you are governed by these terms and conditions, and your use of the services constitutes your agreement to all such terms and conditions.</p><br>
+
+            <h2>2. General Terms and Conditions and User Representations</h2>
+
+            <p>You may not use Accolade Internet Services, for any unlawful or prohibited purpose.
+                You must be 18 years of age or older and possess the legal rights and ability to agree to these Terms and Conditions in order to use the Accolade Internet Services. Access to Accolade Internet Services by anyone under the age of 18 is prohibited. You represent that you are 18 years of age or older.
+                Access to Accolade Internet Services will be restricted by a username and password.</p>
+
+            <p><button id="btnTOSAccept" tabindex="4">ACCEPT</button></p>
+        </section> <!-- .Terms of Service -->
+    </script>
+    <div class="main page-wrapper">
+    </div>
+    <!-- .main -->
+    <!--- inbox message -->
+    <script type="text/template" id="page-template-messagedetail">
+        <div id="MessageDetailDialog" style="margin: 10px">
+            <div class="button-container">
+                <a class="prev-message-btn btn" title="previous message"></a>
+                <a class="next-message-btn btn" title="previous message"></a>
+            </div>
+            <h2 class="mail-heading">
+                Inbox (<strong class="inbox-count"></strong>)
+            </h2>
+            <div id="disclaimer">
+                <button id="showdisclaimer">Disclaimer</button>
+                <div class="disclaimerText"><p>Accolade is here to simplify healthcare and your health benefits for you and your family. We don’t provide those benefits or decide how your claims get paid. Benefits are provided by your employer and are administered by your health plan. The specific benefit details depend on what is covered by your employer and the medical policies in place at the health plan at the time you receive health care services. We are, however, your trusted resources in how it all happens. Just call your Accolade Health Assistant if you have questions. </p>
+
+                    <p>This e-mail, including attachments, may contain confidential and/or proprietary information and may be used only by the person or entity to which it is addressed. If the reader of this e-mail is not the intended recipient or his or her authorized agent, the reader is hereby notified that any dissemination, distribution or copying of this e-mail is prohibited.
+                    </p>
+                </div>
+            </div>
+            <section class="message-container" style="min-height: 400px">
+                <div id="message-detail-container">
+                    <div id="MessageDetail">
+                        <h2 id="message-to"><strong>From: </strong><%=From.NickName%></h2>
+                        <h2 id="message-re"><strong>Re: </strong><%=Regarding.NickName%></h2>
+                        <h3 class="message-title" id="messagetitle"><%= Header.Title %></h3>
+                        <p id="messageDate"><%= Header.Date %></p>
+                        <hr />
+                        <p id="messagecontent"><%= Content %></p>
+                    </div>
+                </div>
+            </section>
+            <div class="inbox-controls-container">
+                <div class="inbox-controls">
+					<a href="#compose/:id" id="btnreply" class="btn">Reply</a>&nbsp;
+                    <a href="#attachment/:id" id="btnArchive" class="btn">Archive</a>&nbsp;
+                    <a href="#message/dismiss/:id" id="btndismissmsg" style="display:none" class="btn" data-next="#inbox">Close</a>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!--Draft Message Details -->
+    <script type="text/template" id="page-template-draft-messagedetail">
+     <div id="DraftMessageDetailDialog" style="margin: 10px">
+            <div class="button-container">
+                <a class="prev-message-btn btn" title="previous message"></a>
+                <a class="next-message-btn btn" title="previous message"></a>
+            </div>
+            <h2 class="mail-heading">
+                My Draft <strong class="inbox-count"></strong>
+            </h2>
+            <section class="message-container" style="min-height: 400px">
+                <div id="message-detail-container">
+                    <div id="MessageDetail">
+                        <h2 id="message-to"><strong>To: </strong><%= To.FirstName %> <%= To.LastName%></h2>
+                        <h2 id="message-re"><strong>Re: </strong><%=Regarding.NickName%></h2>
+                        <h3 class="message-title" id="messagetitle"><%= Header.Title %></h3>
+                        <p id="messageDate"><%= Header.Date %></p>
+                        <hr />
+                        <p id="messagecontent"><%= Content %></p>
+                    </div>
+                </div>
+            </section>
+			<div style="clear:both"/>
+            <div class="inbox-controls-container">
+                <div class="inbox-controls">
+                  <a href="#editDraft/:id" id="btneditdraft" class="btn">Edit </a>&nbsp;
+
+				  <a href="#draft/delete/:id" id="btnDeleteDraft" class="btn">Delete</a>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!--Archive Message Details-->
+    <script type="text/template" id="page-template-archive-messagedetail">
+     <div id="ArchiveMessageDetailDialog" style="margin: 10px">
+            <div class="button-container">
+                <a class="prev-message-btn btn" title="previous message"></a>
+                <a class="next-message-btn btn" title="previous message"></a>
+            </div>
+            <h2 class="mail-heading">
+                My Archive <strong class="Archive-count"></strong>
+            </h2>
+            <div id="disclaimer">
+                <button id="showdisclaimer">Disclaimer</button>
+                <div class="disclaimerText" ><p>Accolade is here to simplify healthcare and your health benefits for you and your family. We don’t provide those benefits or decide how your claims get paid. Benefits are provided by your employer and are administered by your health plan. The specific benefit details depend on what is covered by your employer and the medical policies in place at the health plan at the time you receive health care services. We are, however, your trusted resources in how it all happens. Just call your Accolade Health Assistant if you have questions. </p>
+
+                    <p>This e-mail, including attachments, may contain confidential and/or proprietary information and may be used only by the person or entity to which it is addressed. If the reader of this e-mail is not the intended recipient or his or her authorized agent, the reader is hereby notified that any dissemination, distribution or copying of this e-mail is prohibited.
+                    </p>
+                </div>
+            </div>
+            <section class="message-container" style="min-height: 400px">
+                <div id="message-detail-container">
+                    <div id="MessageDetail">
+                        <h2 id="message-to"><strong>From: </strong><%= From.NickName %></h2>
+                        <h2 id="message-re"><strong>Re: </strong><%=Regarding.NickName%></h2>
+                        <h3 class="message-title" id="messagetitle"><%= Header.Title %></h3>
+                        <p id="messageDate"><%= Header.Date %></p>
+                        <hr />
+                        <p id="messagecontent"><%= Content %></p>
+                    </div>
+                </div>
+            </section>
+            <div class="inbox-controls-container">
+                <div class="inbox-controls">
+                 <a href="#archive/dismiss/:id" id="btndismissarchive" class="btn">
+                    Close</a><!-- &nbsp; <a href="#archive" class="btn">Archive</a> -->
+                </div>
+            </div>
+        </div>
+    </script>
+    <!--Sent Message-->
+    <script type="text/template" id="page-template-sent-messagedetail">
+     <div id="SentMessageDetailDialog" style="margin: 10px">
+            <div class="button-container">
+                <a class="prev-message-btn btn" title="previous message"></a>
+                <a class="next-message-btn btn" title="next message"></a>
+            </div>
+            <h2 class="mail-heading">
+                Inbox <strong class="inbox-count"></strong>
+            </h2>
+            <section class="message-container" style="min-height: 400px">
+                <div id="message-detail-container">
+                    <div id="MessageDetail">
+                        <h2 id="message-to"><strong>To: </strong><%=To.NickName%></h2>
+                        <h2 id="message-re"><strong>Re: </strong><%=Regarding.NickName%></h2>
+                        <h3 class="message-title" id="messagetitle"><%= Header.Title %></h3>
+                        <p id="messageDate"><%= Header.Date %></p>
+                        <hr />
+                        <p id="messagecontent"><%= Content %></p>
+                    </div>
+                </div>
+            </section>
+            <div class="inbox-controls-container">
+                <div class="inbox-controls">
+                  <a href="#sentBox" class="btn">Close</a>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!----End of sent message -->
+    <script type="text/template" id="page-template-myaccount">
+        <section class="account-form">
+            <h2 class="logo-small">My Account</h2>
+            <form id="accountForm" action="" method="POST" onsubmit="return false;">
+
+                <p class="uname-section usec" >
+                    <label for="userName">Username</label>
+                    <input type="text" id="userName" tabindex="1" value="" />
+                    <!-- <a href="#" id="forgotUserNameLink">Forgot User Name?</a> -->
+                    <span class="notice-msg"></span>
+                    <button id="btn-username" tabindex="6">Update</button>
+                </p>
+                <!-- <p class="umail-section">
+                    <label for="userMail">USER MAIL (Personal Email Address)</label>
+                    <input type="text" id="userMail" tabindex="2" value="" />
+                    <span class="notice-msg"></span>
+                    <button id="btn-usermail" tabindex="6">Update</button>
+                </p> -->
+
+                <div class="error-message">
+                    <p><strong>We didn't recognize that username.</strong>
+                    You may have registered with a different email address, such
+                    as one from work. Please try again or call us at [CompanyPhone]</p>
+                </div>
+
+                <p class="upwd-section usec" >
+                    <label for="userPasswordOld">Current Password</label>
+                    <input type="password" id="userPasswordOld" tabindex="3" value="" />
+                    <label for="userPasswordNew">New Password</label>
+                    <input type="password" id="userPasswordNew" tabindex="3" value="" />
+                    <!-- <a href="#" id="forgotPasswordLink">Forgot Password?</a> -->
+                    <span class="notice-msg"></span>
+                    <button id="btn-password" tabindex="6">Update</button>
+                </p>
+
+                <p class="usec-section usec" >
+                    <label for="securityCode">Security Question</label>
+                    <select id="securityCode" tabindex="4" class="select" >
+                        <option value="">Select question</option>
+                    </select>
+                    <label for="securityValue">Answer:</label>
+                    <input type="text" id="securityValue" tabindex="5" value="" />
+                    <label for="userPasswordSec">Password</label>
+                    <input type="password" id="userPasswordSec" tabindex="3" value="" />
+                    <span class="notice-msg"></span>
+                    <button id="btn-seccode" tabindex="6">Save</button>
+                </p>
+            </form>
+        </section>
+    </script>
+    <!--MessageCompose Test -->
+    <script type="text/template" id="page-template-compose">
+      <div id="message-compose">
+        <div class="button-container">
+            <a href="#home" id="btncancel" class="cancel-btn btn">Cancel</a>
+        </div>
+        <h2 class="mail-heading">
+            Inbox (<strong class="inbox-count"></strong>)</h2>
+        <section class="message-container compose-message-form">
+            <form action="" method="POST" name="composeMsgForm" id="compseMsgForm">
+                <p id="pcomposeMsgTo" class="clearfix">
+                    <label for="composeMsgTo">To:</label>
+                    <!-- script id : "Recipients_select_template" -->
+                </p>
+                <p id="pcomposeMsgRe" class="clearfix">
+                    <label for="composeMsgRe">Re:</label>
+                    <!-- script id="Regardings_select_template" -->
+                </p>
+                <p class="clearfix">
+
+                    <label for="composeMsgSubject">Subject:</label>
+                    <input type="text" name="composeMsgSubject" id="composeMsgSubject" value="" />
+                </p>
+                <textarea name="composeMsgBody" style="width:100%" id="composeMsgBody"></textarea>
+            </form>
+        </section>
+
+        <div class="inbox-controls-container" id="compose-inbox-controls-container">
+            <div class="inbox-controls">
+                <a href="#attachment/:id" id="btnAttachFile" class="btn">Attach File</a>&nbsp;
+                <!--  <button id="btnsendmessage" class="send-btn btn">
+                Send</button>-->
+                <a href="#saveDraft/:id" id="btnSaveDraft" class="send-btn btn" style="background: #FFA740 !important;
+                color: white;">Save Draft</a> <a href="#send/undefined" id="btnsendmail" class="send-btn btn"
+                    style="background: #FFA740 !important; color: white;">Send</a>
+            </div>
+        </div>
+      </div>
+    </script>
+
+    <!--MessageCompose Test-------->
+    <script type="text/template" id="page-template-draftedit">
+        <div id="message-compose">
+            <div class="button-container">
+                <a href="#draftBox" id="btncancel" class="cancel-btn btn">Cancel</a>
+            </div>
+            <h2 class="mail-heading">
+                Inbox (<strong class="inbox-count"></strong>)</h2>
+            <section class="message-container compose-message-form">
+                <form action="" method="POST" name="composeMsgForm" id="compseMsgForm">
+                    <p id="pcomposeMsgTo" class="clearfix">
+                        <label for="composeMsgTo">To:</label>
+                        <!-- script id : "Recipients_select_template" -->
+                    </p>
+                    <p id="pcomposeMsgRe" class="clearfix">
+                        <label for="composeMsgRe">Re:</label>
+                        <!-- script id="Regardings_select_template" -->
+                    </p>
+                    <p class="clearfix">
+
+                        <label for="composeMsgSubject">Subject:</label>
+                        <input type="text" name="composeMsgSubject" id="composeMsgSubject" value="" />
+                    </p>
+                    <textarea name="composeMsgBody" style="width:100%" id="composeMsgBody"></textarea>
+                </form>
+            </section>
+
+            <div class="inbox-controls-container" id="compose-inbox-controls-container">
+                <div class="inbox-controls">
+                    <a href="#attachment/:id" id="btnAttachFile" class="btn">Attach File</a>&nbsp;
+                    <!--  <button id="btnsendmessage" class="send-btn btn">
+                    Send</button>-->
+                     <!-- href="#updateDraft/:id" -->
+                    <a id="btnUpdateDraft" class="send-btn btn" style="background: #FFA740 !important;color: white;">Save Draft</a>
+                    <a id="btnSendDraft" class="send-btn btn" style="background: #FFA740 !important; color: white;">Send</a>
+                </div>
+            </div>
+        </div>
+    </script>
+
+	<!--   ui component templates          -->
+	<script type="text/template" id="Recipients_select_template">
+        <select id="Recipients_selector" class="select">
+            <option value="">Select</option>
+            <% _.each(recipients, function(recipient) {%>
+            <option value="<%= recipient.Id %>"><%= recipient.FirstName %></option>
+            <% }); %>
+        </select>
+    </script>
+	<script type="text/template" id="com_success_notice">
+		<div class="error-message is-visible">
+			<p><strong><%=title%></strong><%=content%></p>
+		</div>
+    </script>
+    <script type="text/template" id="Regardings_select_template">
+        <select id="Regardings_selector" class="select">
+            <option value="">Select</option>
+            <% _.each(regardings, function(regarding) {%>
+            <option value="<%= regarding.Id %>"><%= regarding.FirstName %></option>
+            <% }); %>
+        </select>
+    </script>
+
+
+
+	
+	<script type="text/javascript" charset="utf-8">
+
+		var pictureSource;   // picture source
+		var destinationType; // sets the format of returned value 
+		var imageURI = "";
+		document.addEventListener("deviceready",onDeviceReady,false);
+
+		function onDeviceReady() {
+			pictureSource=navigator.camera.PictureSourceType;
+			destinationType=navigator.camera.DestinationType;
+		}
+		function onPhotoDataSuccess(imageData) {
+		  var smallImage = document.getElementById('smallImage');
+		  smallImage.style.display = 'block';
+		  smallImage.src = "data:image/jpeg;base64," + imageData;
+		  imageURI = imageData;
+		}
+		function capturePhoto() {
+		  navigator.camera.getPicture(onPhotoDataSuccess, onFail, { 
+			quality: 50,
+			destinationType: navigator.camera.DestinationType.FILE_URI,
+			sourceType: navigator.camera.PictureSourceType.CAMERA });
+		}
+		function onFail(message) {
+		  alert('Failed because: ' + message);
+		}
+
+    </script>
+
+    <div id="uploadfile" class="modal-dialog">
+
+        <h3>Upload File</h3>
+		<div class="content">
+			<form id="uploadfileform" method="post" action="" enctype="multipart/form-data">
+			<div id="getpic">
+				<input type="file" id="fileuploader" name="fileNode" onchange="return CheckFileSize();" />
+			</div>
+			<div id="takepic" style="display:none;">
+				<button onclick="capturePhoto();">Capture Photo</button>
+				<img style="display:none;width:10px;height:10px;" id="smallImage" src="" />
+			</div>
+			<div>
+				<p style="float: right;" class="button-container">
+					<a href="#Filepost" style="font-size: 10px; background: #FFA740 !important; color: white;"
+						class="send-btn btn">Ok</a> &nbsp; <a href="#Cancel" style="font-size: 10px; color: white;
+							background: #919295;" class="btn">Cancel</a>
+				</p>
+			</div>
+			</form>
+		</div>
+    </div>
+    <!-- end of MessageCompose Test-->
+    <aside>
+        <nav>
+            <ul>
+				<li class="menu-compose"><button class="compose-button" >Compose</button></li>
+                <li class="menu-inbox"><a href="#inbox">Inbox</a></li>
+				<li class="menu-drafts"><a href="#draftBox">Drafts</a></li>
+                <li class="menu-archive"><a href="#archiveBox">Archive</a></li>
+                <li class="menu-sent"><a href="#sentBox">Sent</a></li>
+                <!-- <li class="menu-tools"><a href="">Wellness Tools</a></li> -->
+                <!-- <li class="menu-records"><a href="">Health Records</a></li> -->
+                <li class="menu-benefits"><a href="#benefits">Benefits</a></li> 
+
+                <li class="menu-account"><a href="#myaccount">Account</a></li>
+                <li class="menu-home"><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <footer class="app-footer">
+        <ul class="clearfix">
+            <li class="footer-inbox-link"><a href="#inbox">Inbox (<small class="inbox-count"></small>)</a></li>
+            <li class="footer-home-link"><a href="#">Home</a></li>
+			<li class="footer-site-link" style="display:none"><a href="/?forceStdSite=true" style="width:110px;">View Full Site</a></li>
+        </ul>
+    </footer>
+    <!-- MODAL DIALOGS -->
+    <div id="NoticeDetailDialog" class="modal-dialog">
+        <script type="text/template" id="modal-template-noticedetail">
+			<h3><%= Header.Title %></h3>
+            <div class="content">
+                <p><%= Content %></p>
+                <div class="button-container"><button id="NoticeDlgCancelBtn" class="cancel">Close</button></div>
+            </div>
+        </script>
+    </div>
+    <script src="/_layouts/mobileclientportal/js/accolade.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		var app = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/);
+        $(document).ready(function () {
+            if (/iPhone|iPod|iPad/.test(navigator.userAgent))
+                $('iframe').wrap(function(){
+                    var $this = $(this);
+                    return $('<div />').css({
+                        width: $this.attr('width'),
+                        height: $this.attr('height'),
+                        overflow: 'scroll',
+                        '-webkit-overflow-scrolling': 'txouch'
+                    });
+                });
+			currentWidth = window.innerWidth;
+			var updateLayout = function() {
+              if (window.innerWidth != currentWidth) {
+                currentWidth = window.innerWidth;
+                var orient = (currentWidth == 320) ? "profile" : "landscape";
+                document.body.setAttribute("orient", orient);
+                setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
+              }
+            };
+
+           try {
+             iPhone.DomLoad(updateLayout);
+           } catch (e) {
+
+           }
+
+            setInterval(updateLayout, 500);
+
+			//show/hide the Full Site View button in only cordova app
+			if (getCookie("DeviceId") != "undefined") {
+				//only add the isNativeMobileApp parameter to the logout url if and only if DeviceID cookie is present.
+				//$(".btnLogout").attr("href", $(".btnLogout").attr("href") + "&isNativeMobileApp=1");
+				$(".footer-site-link").hide();
+				$(".footer-inbox-link a").attr("style", "");
+				$(".footer-home-link a").attr("style", "");
+				$("#getpic").hide();
+				$("#takepic").show();
+			} else {
+				$(".footer-site-link").show();
+				$(".footer-inbox-link a").attr("style", "width:87px;text-align: left;");
+				$(".footer-home-link a").attr("style", "width:95px;");
+				$("#getpic").show();
+				$("#takepic").hide();
+			}
+
+			//Infinit Scroll Implementation
+			inboxMsgs = new InboxCollection([],{limit:1000});
+			inboxMsgsView = new InboxListView({collection: inboxMsgs});
+			$(window).scroll(function() {
+				if ($("dl#recent-messages").css("display") == "block"){
+					var triggerPoint = 100;
+					if ( !inboxMsgsView.isLoading && $(this).scrollTop() + $(this).height() + triggerPoint > $(document).height() ) {
+						inboxMsgs.start += inboxMsgs.limit;
+						inboxMsgsView.loadResults();
+					}
+				}
+			});
+		});
+    </script>
+</div>
+</body>
+</html>

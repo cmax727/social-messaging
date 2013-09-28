@@ -1,0 +1,12 @@
+{
+    "GetNoticeItemResult": {
+        "Content": "Sample second notice item for mobile",
+        "Header": {
+            "ContentPreview": null,
+            "Date": "/Date(1362114000000-0500)/",
+            "HasRead": false,
+            "Id": "2",
+            "Title": "Notice Item 2"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+"GetNewsItemResult":
+{
+"Content":"Sample news item for mobile application",
+"Header":{"Date":"\/Date(1362114000000-0500)\/",
+"HasRead":false,"Id":"10","Title":"New Item 1"
+}
+}
+}

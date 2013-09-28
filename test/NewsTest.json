@@ -1,0 +1,37 @@
+{
+    "GetNewsHeadersResult": {
+        "Items": [
+            {
+                "Date": "/Date(1362114000000-0500)/",
+                "HasRead": false,
+                "Id": "1",
+                "Title": "News Item 1 public "
+            },
+            {
+                "Date": "/Date(1362114000000-0500)/",
+                "HasRead": false,
+                "Id": "2",
+                "Title": "News Item 2"
+            },
+			{
+                "Date": "/Date(1362114000000-0500)/",
+                "HasRead": false,
+                "Id": "3",
+                "Title": "News Item 3"
+            },
+			{
+                "Date": "/Date(1362114000000-0500)/",
+                "HasRead": false,
+                "Id": "4",
+                "Title": "News Item 4"
+            },
+			{
+                "Date": "/Date(1362114000000-0500)/",
+                "HasRead": false,
+                "Id": "5",
+                "Title": "News Item 5"
+            }
+        ],
+        "Total": 5
+    }
+}

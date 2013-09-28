@@ -1,0 +1,30 @@
+.splash-header {
+	background: none;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+	        box-shadow: none;
+	height: auto;
+	margin: 0;
+	padding-top: 40%;
+	position: relative;
+}
+
+	.splash-logo {
+		background: transparent url(../img/logo_splash.png) no-repeat center 0;
+		background-size: 320px 218px;
+		height: 218px;
+		margin: 0;
+		overflow: hidden;
+		text-indent: 100%;
+		white-space: nowrap;
+	}
+
+.splash-intro {
+	padding: 0 25px;
+}
+
+	.splash-intro p {
+		color: #615A53;
+		font-size: 0.81em;
+		font-weight: bold;
+	}

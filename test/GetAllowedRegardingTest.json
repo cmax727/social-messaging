@@ -1,0 +1,34 @@
+{
+    "GetValidRegardingResult": [
+        {
+            "FirstName": "Test17",
+            "Id": 321,
+            "IsFederated": false,
+            "LastName": "Client17",
+            "MrmId": "a3fd40c8-db07-e011-a024-00237def8bc6",
+            "NickName": "Not Marzipan",
+            "PhoneNumber": "(111)-111-1111",
+            "SubId": 1008
+        },
+        {
+            "FirstName": "Test4",
+            "Id": 320,
+            "IsFederated": false,
+            "LastName": "Client4",
+            "MrmId": "5aedb983-db07-e011-a024-00237def8bc6",
+            "NickName": "fred",
+            "PhoneNumber": "(111)-111-1111",
+            "SubId": 1011
+        },
+        {
+            "FirstName": "Joe",
+            "Id": 319,
+            "IsFederated": true,
+            "LastName": "GrayAUSKie",
+            "MrmId": "442850f9-cd56-de11-9b5b-00237def8bc6",
+            "NickName": "Joey",
+            "PhoneNumber": "0619",
+            "SubId": 1008
+        }
+    ]
+}

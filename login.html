@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/accolade.css">
+    <script src="js/lib/jquery-1.9.0.min.js"></script>
+    <script src="js/lib/jquery.tmple.min.js"></script>
+    <script src="js/lib/underscore-min.js"></script>
+    <script src="js/lib/backbone-min.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="login-title">ACCOLADE LOGIN</h1>
+    </header>
+    <div class="main login-container">
+        <section class="login-form">
+            <h2 class="logo-small">Accolade</h2>
+
+            <form id="loginForm" action="" method="POST">
+
+            <p><label for="employerName">EMPLOYER NAME</label>
+                <input type="text" id="employerName" tabindex="1" value="" /></p>
+
+            <p><label for="userName">USER NAME (Personal Email Address)</label>
+                <input type="text" id="userName" tabindex="2" value="" />
+                <a href="#" id="forgotUserNameLink">Forgot User Name?</a></p>
+
+            <div class="error-message">
+                <p><strong>We didn't recognize that username.</strong>
+                     You may have registered with a different email address, such
+                    as one from work. Please try again or call us at [CompanyPhone]</p>
+            </div>
+
+            <p><label for="userPassword">PASSWORD</label>
+                <input type="password" id="userPassword" tabindex="3" value="" />
+                <a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
+
+            <p><button type="submit" tabindex="4">SUBMIT</button></p>
+            </form>
+        </section>
+        <!-- .main -->
+        <section class="message-container whats-new" id="newslist">
+            <h2>WHAT'S NEW</h2>
+        </section>
+        <!-- .whats-new -->
+    </div>
+    <!-- .main -->
+    <footer class="splash-footer">
+        <ul class="clearfix">
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+			<li class="footer-site-link"><a href="/?isNativeMobileApp=false">View Full Site</a></li>
+        </ul>
+    </footer>
+    <!-- MODAL DIALOGS -->
+    <div class="modal-overlay">
+    </div>
+    <div id="forgotUserPassDialog" class="modal-dialog">
+        <h3>
+            Recover Password or User Name</h3>
+        <div class="forgot-user-pass-form">
+            <form id="forgotUserPassForm" action="" method="POST">
+            <p>
+                <label for="forgotUserPassEmail">
+                    Enter your Email</label>
+                <input type="text" id="forgotUserPassEmail" value="" /></p>
+            <p class="modal-button-container">
+                <button id="forgotUserPassCancelBtn" class="cancel">
+                    CANCEL</button>
+                &nbsp;
+                <button type="submit">
+                    SUBMIT</button></p>
+            </form>
+        </div>
+        <!-- MODAL DIALOGS for security question -->
+        <!-- MODAL DIALOGS for security question -->
+        <div class="forgot-user-pass-success">
+            <p class="forgot-user-pass-success-message">
+                Check your email for<br />
+                reset instructions.</p>
+            <p class="modal-button-container">
+                <button id="forgotUserPassOkBtn">
+                    OK</button></p>
+        </div>
+    </div>
+    <!-- .modal-dialog -->
+    <div id="NewsDetailDialog" class="modal-dialog">
+        <script type="text/template" id="newsdetail_template">
+			<h3><%= Header.Title %></h3>
+			<p><%= Content %></p>
+			<p class="button-container"><button id="NewsDlgCancelBtn" class="cancel">CANCEL</button></p>
+        </script>
+    </div>
+    <div id="SecurityAnswerdiv" class="modal-dialog">
+        <h3>
+            Recover Password or User Name</h3>
+        <div class="forgot-user-pass-form">
+            <form id="SecurityAnswerform" action="" method="POST">
+            <p>
+                Security Question:</p>
+            <p id="securityquestion">
+            </p>
+            <p>
+                <label for="SecurityAnswerlbl">
+                    Enter your Answer</label>
+                <input type="text" id="txtanswer" value="" /></p>
+            <p class="button-container">
+                <button id="cancelbutton" class="cancel">
+                    CANCEL</button>
+                &nbsp;
+                <button id="submitanswer" type="button">
+                    SUBMIT</button></p>
+            </form>
+        </div>
+        <div class="forgot-user-pass-success">
+            <p class="forgot-user-pass-success-message">
+                Check your email for<br />
+                reset instructions.</p>
+            <p class="button-container">
+                <button id="forgotUserPassOkBtnsucess">
+                    OK</button></p>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>
